@@ -1,4 +1,4 @@
-#N canvas 0 0 1263 668 12;
+#N canvas 2036 77 1523 864 12;
 #X declare -lib mrpeach;
 #X obj -484 -105 unpackOSC;
 #X obj 767 -22 import mrpeach;
@@ -38,16 +38,16 @@
 #X text -407 151 VERTICAL;
 #X obj -453 175 map -1.7 1.7 2 8.5;
 #X obj -659 322 hsl 128 15 2.2 8.5 0 0 empty empty empty -2 -8 0 10
--257985 -1 -1 6688 1;
+-257985 -1 -1 6652 1;
 #X obj -102 287 hsl 128 15 2.2 9 0 0 empty empty empty -2 -8 0 10 -204800
--1 -1 6162 1;
+-1 -1 6163 1;
 #X obj -452 334 hsl 128 15 2.2 8.5 0 0 empty empty empty -2 -8 0 10
--257985 -1 -1 6566 1;
+-257985 -1 -1 6148 1;
 #X floatatom -453 40 5 0 0 0 - - -;
 #X floatatom -103 59 5 0 0 0 - - -;
 #X obj -103 32 * 2;
 #X obj 265 368 hsl 128 15 2.2 8.5 0 0 empty empty empty -2 -8 0 10
--257985 -1 -1 1226 1;
+-257985 -1 -1 6350 1;
 #X obj 766 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 784 19 loadbang;
@@ -64,11 +64,11 @@
 #X obj -455 432 speedlim 60;
 #X obj -662 423 speedlim 60;
 #X obj 86 -343 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 6351 1;
+-1 -1 6350 1;
 #X obj 262 207 map 90 -90 8.5 2.2;
 #X floatatom -5 -216 5 0 0 0 - - -;
 #X obj 86 -231 hsl 128 15 0 360 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 3793 1;
+-1 -1 6350 1;
 #X obj 769 157 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 0 22 1284 721 botonCalibrar 0;
@@ -80,7 +80,7 @@
 #X msg 280 272 1;
 #X msg 314 273 0;
 #X obj 136 271 hsl 128 15 0 360 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 6351 1;
+-1 -1 6350 1;
 #X obj 133 236 map -3 3 0 360;
 #X obj 169 359 outlet;
 #X connect 0 0 1 0;
@@ -261,7 +261,12 @@ for pitch);
 #X msg 769 -64 open 18;
 #X text 522 -85 shows list of devices in terminal;
 #X text 513 -63 change to your arduino port number;
+#X obj -341 -83 routeOSC /correct;
+#X obj -341 -48 t b;
+#X obj -581 -139 print;
 #X connect 0 0 87 0;
+#X connect 0 0 123 0;
+#X connect 0 0 125 0;
 #X connect 2 0 7 0;
 #X connect 3 0 59 0;
 #X connect 4 0 6 0;
@@ -363,3 +368,5 @@ for pitch);
 #X connect 116 0 37 0;
 #X connect 119 0 58 0;
 #X connect 120 0 6 0;
+#X connect 123 0 124 0;
+#X connect 124 0 68 0;
